@@ -25,7 +25,7 @@ SECRET_KEY = 'xot1h7(7u(-3lf^4^aj@a)mn25ll7zlaha_4d(72!%nu@r1nrh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['nepha.net']
+ALLOWED_HOSTS = ['localhost', 'nepha.net']
 
 
 # Application definition

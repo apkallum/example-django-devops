@@ -14,6 +14,8 @@ services:
       - "8000:8000"
     depends_on:
       - db
+    volumes:
+      - ./code/banana/static:opt/banana/static
 
   nginx: 
     image: nginx:latest
@@ -25,6 +27,7 @@ services:
       - ./etc/nginx/conf.d:/etc/nginx/conf.d
       - ./etc/nginx/vhost.d:/etc/nginx/vhost.d
       - ./etc/nginx/html:/usr/share/nginx/html
+      - ./code/banana/static:/opt/monadical/example-django-devops/code/banana/static
     depends_on:
         - web
   # certbot:
