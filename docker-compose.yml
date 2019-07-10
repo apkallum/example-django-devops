@@ -15,7 +15,7 @@ services:
     depends_on:
       - db
     volumes:
-      - ./code/banana/static:opt/banana/static
+      - ./code/banana/static:/opt/banana/static
 
   nginx: 
     image: nginx:latest
