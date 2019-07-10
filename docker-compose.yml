@@ -10,8 +10,6 @@ services:
   web:
     build: ./code
     command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
-    ports:
-      - "8000:8000"
     depends_on:
       - db
     volumes:
@@ -30,8 +28,6 @@ services:
       - ./code/banana/static:/opt/monadical/example-django-devops/code/banana/static
     depends_on:
         - web
-  # certbot:
-  #   image: certbot/certbot
 
 volumes:
-  pg_data: {}
+  pg_data:
