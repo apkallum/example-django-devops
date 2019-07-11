@@ -1,0 +1,3 @@
+#!/bin/bash
+docker-compose exec db bash -lc 'pg_dump postgres -U postgres ' > "/opt/monadical/example-django-devops/data/backups/banana_$(date +%s).sql"
+echo "Backup finished."

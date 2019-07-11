@@ -1,0 +1,5 @@
+#!/bin/bash
+/bin/bash backup
+git pull
+/bin/bash stop
+/bin/bash start
